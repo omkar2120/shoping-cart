@@ -1,10 +1,17 @@
 import React from 'react'
 import { productsApi, useGetAllProductsQuery }  from '../features/productsApi';
 import Navbar from './Navbar'
+import { useDispatch , useSelector} from 'react-redux';
+import "./style.css"
+import { addToCart } from '../features/cartSlice';
 
 const Home = () => {
     const  { data, error, isLoading } = useGetAllProductsQuery();
+    const dispatch = useDispatch();
 
+    const handleAddToCart = (products) => {
+        dispatch(addToCart(products));
+    }
     return (
         <div>
                 <Navbar />
@@ -20,13 +27,13 @@ const Home = () => {
                        <div className="products">
                            {data?.map((products) => (
                                <div key={products.id} className="product">
-                                   <h3>{productsApi.name}</h3>
+                                   <h3>{products.name}</h3>
                                       <img src={products.image} alt={products.name} />
                                          <div className="details">
                                              <span>{products.desc}</span>
                                               <span className="price">₹{products.price}</span>
                                          </div>
-                                         <button>Add To Cart</button>
+                                         <button onClick={() => handleAddToCart(products)}>Add To Cart</button>   
 
                                </div>
                            ))}

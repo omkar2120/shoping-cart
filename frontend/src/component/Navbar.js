@@ -1,9 +1,10 @@
 import React from 'react'
 import LocalMallIcon from '@material-ui/icons/LocalMall';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import "./navbar.css"
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
+import "./style.css"
+
 const Navbar = () => {
     return (
         <div className="nav-main">

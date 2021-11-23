@@ -4,13 +4,17 @@ import Navbar from './Navbar'
 import { useDispatch , useSelector} from 'react-redux';
 import "./style.css"
 import { addToCart } from '../features/cartSlice';
+import { useHistory } from 'react-router';
+
 
 const Home = () => {
     const  { data, error, isLoading } = useGetAllProductsQuery();
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const handleAddToCart = (products) => {
         dispatch(addToCart(products));
+        history.push("/cart")
     }
     return (
         <div>

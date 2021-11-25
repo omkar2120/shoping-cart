@@ -5,7 +5,7 @@ import { useDispatch , useSelector} from 'react-redux';
 import "./style.css"
 import { addToCart } from '../features/cartSlice';
 import { useHistory } from 'react-router';
-
+import cartSlice from '../features/cartSlice';
 
 const Home = () => {
     const  { data, error, isLoading } = useGetAllProductsQuery();

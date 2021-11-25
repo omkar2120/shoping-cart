@@ -4,8 +4,10 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
 import "./style.css"
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+    const {cartTotalQuantity} = useSelector(state => state.cart)
     return (
         <div className="nav-main">
             <div className="nav-text">
@@ -15,7 +17,7 @@ const Navbar = () => {
             </div>
 
             <div className="nav-cart">
-               <Link to="/cart"><h1>Cart <span className="num">5</span></h1></Link>
+               <Link to="/cart"><h1>Cart <span className="num">{cartTotalQuantity}</span></h1></Link>
             </div>
         </div>
     )

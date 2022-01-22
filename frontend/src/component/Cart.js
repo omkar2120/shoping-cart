@@ -75,7 +75,7 @@ const handleIClearCart = () => {
                                        <button onClick={() => handleIncreaseCart(cartItems)}> + </button>
                                    </div>
                                    <div className="cart-product-total-price">
-                                       ${cartItems.price * cartItems.cartQuantity}
+                                   ₹{cartItems.price * cartItems.cartQuantity}
                                    </div>
                                 </div>
                             ))}
@@ -84,7 +84,7 @@ const handleIClearCart = () => {
                            <button className="clear-btn" onClick={() => handleIClearCart()}> Clear Cart</button>
                            <div className="cart-checkout">
                                <div className="subtotal">
-                                  <span className="amount">${cart.cartTotalAmount}</span>
+                                  <span className="amount">₹{cart.cartTotalAmount}</span>
                                </div>
                                <p>Taxex and Shiping calculated in checkout</p>
                                <button>Checkput</button>

@@ -79,7 +79,7 @@ const handleIClearCart = () => {
                                    </div>
                                 </div>
                             ))}
-                        </div>
+                        </div>              
                         <div className="cart-summary">
                            <button className="clear-btn" onClick={() => handleIClearCart()}> Clear Cart</button>
                            <div className="cart-checkout">

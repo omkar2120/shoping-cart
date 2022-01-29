@@ -3,7 +3,7 @@ import React from 'react'
 import Navbar from './Navbar';                     
 import "./cart.css"
 import { useSelector , useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect } from 'react';                   
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { addToCart, clearCart, getTotal, removeFromCart } from '../features/cartSlice';

@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Navbar from './Navbar';
+import Navbar from './Navbar';                     
 import "./cart.css"
 import { useSelector , useDispatch } from 'react-redux';
 import { useEffect } from 'react';

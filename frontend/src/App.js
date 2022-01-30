@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const App = () => {
+const App = () => {  
   return (
     <div>
      <BrowserRouter>
